@@ -14,7 +14,8 @@ function writePassword() {
 
 }
 
-function writePassword() {
+function generatePassword() {
+    //variables for password
     var password = "";
     var choices = []
     var lCase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
@@ -22,15 +23,14 @@ function writePassword() {
     var symbols = ["!","#","~","@","$","%","^","&","*","+"]
     var numbers = [0,1,2,3,4,5,6,7,8,9]
 
+    //get password length
     var passlength = parseInt(prompt("For the length of your password. Pick between 8 and 128 characters"));
-
     if (passlength < 8 || passlength > 128 ){
       //alert if they did not pick correct value
       alert("Invalid input, Pick between 8 and 128 characters");
       return;
     } 
     
-
     var pickLower = confirm("Include lowercase letters?");
     if(pickLower) {
   //choices array concat with the other arrays, select lowercase letters here
@@ -54,6 +54,12 @@ function writePassword() {
       //select symbols here
       choices = choices.concat(symbols);
     }
+
+    for (var i = 0; i < passlength; i++) 
+      password += choices[Math.floor(Math.random()*choices.length)];
+
+      return password;
+    
 
 
 
