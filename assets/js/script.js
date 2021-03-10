@@ -45,10 +45,15 @@ function writePassword() {
 
     var pickNumbers = confirm("Include Numbers?");
     if (pickNumbers) {
-      //select lower case letters here
+      //select numbers here
       choices = choices.concat(numbers);
     }
 
+    var pickSymbols = confirm("Include Special Characters?");
+    if (pickSymbols) {
+      //select symbols here
+      choices = choices.concat(symbols);
+    }
 
 
 
