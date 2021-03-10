@@ -33,15 +33,22 @@ function writePassword() {
 
     var pickLower = confirm("Include lowercase letters?");
     if(pickLower) {
-  //choices array concat with the other arrays, select lower case letters here
+  //choices array concat with the other arrays, select lowercase letters here
        choices = choices.concat(lCase);
     }
     
     var pickUpper = confirm("Include uppercase letters?");
     if (pickUpper) {
-      //select lower case letters here
+      //select uppercase letters here
       choices = choices.concat(uCase);
     }
+
+    var pickNumbers = confirm("Include Numbers?");
+    if (pickNumbers) {
+      //select lower case letters here
+      choices = choices.concat(numbers);
+    }
+
 
 
 
