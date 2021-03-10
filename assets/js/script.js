@@ -28,8 +28,18 @@ function writePassword() {
       //alert if they did not pick correct value
       alert("Invalid input, Pick between 8 and 128 characters");
       return;
-      
+    } 
+    
+
+    var pickLower = confirm("Include lowercase letters?");
+
+    if(pickLower) {
+  //choices array concat with the other arrays.
+       choices = choices.concat(lCase);
     }
+
+
+
 }
 
 
