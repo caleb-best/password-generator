@@ -28,8 +28,12 @@ function generatePassword() {
     if (passlength < 8 || passlength > 128 ){
       //alert if they did not pick correct value
       alert("Invalid input, Pick between 8 and 128 characters");
-      return;
-    } 
+      return false;
+    } if (isNaN(passlength)){
+      //makes sure it is a number selected
+      alert("Invalid input, Please Enter a number between 8 and 128");
+      return false;
+    }
     
     var pickLower = confirm("Include lowercase letters?");
     if(pickLower) {
@@ -57,11 +61,7 @@ function generatePassword() {
 
     for (var i = 0; i < passlength; i++) 
       password += choices[Math.floor(Math.random()*choices.length)];
-
       return password;
-    
-
-
 
 }
 
