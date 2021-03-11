@@ -14,7 +14,7 @@ The functionality of the generator was developed through the use javascript wher
 
 ## Preview ##
 
-[Preview](assets/images/03-javascript-homework-demo.png)
+[Preview](assets/images/Password Generator.gif)
 
 
 ## Live Page ##
