@@ -59,6 +59,7 @@ function generatePassword() {
       choices = choices.concat(symbols);
     }
 
+    //This loop take the data from the arrays and generates the password
     for (var i = 0; i < passlength; i++) 
       password += choices[Math.floor(Math.random()*choices.length)];
       return password;
